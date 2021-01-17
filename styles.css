@@ -1,0 +1,35 @@
+body {
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+  box-sizing: border-box;
+}
+.mouse-hover {
+  display: inline-block;
+}
+.mouse-hover:hover > .mouse-hover-content {
+  display: block;
+}
+.mouse-hover-content a {
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: justify;
+  font-size: 14px;
+  color: #767676 !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.mouse-hover-content {
+  line-height: 1.5;
+  color: #212529;
+  text-align: justify;
+  font-size: 14px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.previewFrame {
+  height: 30vh;
+}

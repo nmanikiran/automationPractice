@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automtion Practice</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body class="bg-gray-50 font-sans leading-normal tracking-normal">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <nav class="fixed bg-gray-800 shadow-md z-50 w-full top-0 mt-0">
+      <div class="max-w-full mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+          <div
+            class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="sm:block sm:ml-6">
+              <div class="flex space-x-4">
+                <a
+                  href="#form"
+                  class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Home</a
+                >
+                <a
+                  href="#popup"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Popup</a
+                >
+                <a
+                  href="#frame"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Frames</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <!-- Profile dropdown -->
+            <div class="ml-3 relative">
+              <div>
+                <button
+                  class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                  id="user-menu"
+                  aria-haspopup="true"
+                >
+                  <span class="sr-only">Open user menu</span>
+                  <img
+                    class="h-8 w-8 rounded-full"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto">
+      <section class="form-inputs" id="form">
+        <h1 class="my-4 text-4xl">Form inputs</h1>
+        <hr class="p-2" />
+        <form>
+          <div
+            class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+          >
+            <div class="input-text">
+              <label for="name" class="text-xl">Input text</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter Name"
+              />
+            </div>
+            <div class="input-password">
+              <label for="pwd" class="text-xl">Input Password</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="password"
+                id="pwd"
+                name="password"
+                placeholder="Enter password"
+              />
+            </div>
+            <div class="input-email">
+              <label for="email" class="text-xl">Input Email</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="input-number">
+              <label for="number" class="text-xl">Input Number</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="number"
+                id="number"
+                name="number"
+                min="0"
+                max="99"
+                placeholder="Enter number"
+              />
+            </div>
+            <div class="input-tel">
+              <label for="tel" class="text-xl">Input Phone</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter Phone"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              />
+            </div>
+            <div class="input-time">
+              <label for="time" class="text-xl">Input time</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="time"
+                id="time"
+                name="time"
+                placeholder="Enter time"
+              />
+            </div>
+            <div class="input-search">
+              <label for="search" class="text-xl">Input Search</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Enter search"
+              />
+            </div>
+            <div class="input-url">
+              <label for="url" class="text-xl">Input Url</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="url"
+                id="url"
+                name="url"
+                placeholder="Enter url"
+              />
+            </div>
+            <div class="select-color">
+              <label for="color" class="text-xl">Select Color</label> <br />
+              <input type="color" id="favcolor" name="favcolor" />
+            </div>
+            <div class="input-date">
+              <label for="date" class="text-xl">Input Date</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                type="date"
+                id="date"
+                name="date"
+                min="2020-12-31"
+              /><br />
+            </div>
+            <div class="input-file">
+              <label for="file" class="text-xl">Input File</label>
+              <input type="file" id="file" name="file" />
+            </div>
+            <div class="input-range">
+              <label for="range" class="text-xl">Input Range</label>
+              <input
+                type="range"
+                id="vol"
+                name="vol"
+                min="0"
+                max="50"
+                placeholder="Enter Range"
+              />
+            </div>
+            <div class="select-radio">
+              <label class="text-xl">Select radio</label> <br />
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label><br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label><br />
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label>
+            </div>
+            <div class="select-checkbox">
+              <label class="text-xl">Select Checkbox</label> <br />
+              <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+              <label for="vehicle1"> I have a bike</label><br />
+              <input
+                type="checkbox"
+                id="vehicle2"
+                name="vehicle2"
+                value="Car"
+              />
+              <label for="vehicle2"> I have a car</label><br />
+              <input
+                type="checkbox"
+                id="vehicle3"
+                name="vehicle3"
+                value="Boat"
+              />
+              <label for="vehicle3"> I have a boat</label>
+            </div>
+            <div class="select-single">
+              <label for="cars" class="text-xl">Select Single</label> <br />
+              <select class="border-2 border-gray-100" id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+              </select>
+            </div>
+            <div class="select-multiple">
+              <label for="language" class="text-xl">Select Multiple</label>
+              <br />
+              <select
+                id="language"
+                name="language"
+                class="border-2 border-gray-100"
+                data-placeholder="Choose a Language..."
+                multiple
+              >
+                <option value="Arabic">Arabic</option>
+                <option value="Armenian">Armenian</option>
+                <option value="Dutch">Dutch</option>
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Korean">Korean</option>
+                <option value="Latin">Latin</option>
+                <option value="Portuguese">Portuguese</option>
+                <option value="Russian">Russian</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Swedish ">Swedish</option>
+                <option value="Turkish">Turkish</option>
+                <option value="Urdu">Urdu</option>
+              </select>
+            </div>
+            <div class="select-datalist">
+              <label for="browser" class="text-xl">Datalist Element</label>
+              <input
+                class="block w-full py-3 px-1 mt-2 text-gray-800 appearance-none border-b-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+                list="browsers"
+                name="browser"
+              />
+              <datalist id="browsers">
+                <option value="Internet Explorer"></option>
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+              </datalist>
+            </div>
+
+            <div class="details-element">
+              <label for="details" class="text-xl">Details Element</label>
+
+              <details id="details">
+                <summary>Epcot Center</summary>
+                <p>
+                  Epcot is a theme park at Walt Disney World Resort featuring
+                  exciting attractions, international pavilions, award-winning
+                  fireworks and seasonal special events.
+                </p>
+              </details>
+            </div>
+          </div>
+          <div class="input-button my-4">
+            <input
+              class="mx-2 p-4 shadow border-2 border-gray-100"
+              type="reset"
+              id="reset"
+              name="reset"
+            />
+            <input
+              class="mx-2 p-4 shadow border-2 border-gray-100"
+              type="button"
+              id="button"
+              name="button"
+              value="Button"
+            />
+            <input
+              class="mx-2 p-4 shadow border-2 border-gray-100"
+              type="submit"
+              id="submit"
+              name="submit"
+            />
+          </div>
+        </form>
+      </section>
+      <section class="alerts" id="popup">
+        <h1 class="mt-12 mb-4 text-4xl">Popup Boxes</h1>
+        <hr class="py-2" />
+        <button
+          class="mx-2 p-4 shadow border-2"
+          onclick="alert('Hello! I am an alert box!');"
+        >
+          Alert
+        </button>
+        <button class="mx-2 p-4 shadow border-2" id="confirm">Confirm</button>
+        <button class="mx-2 p-4 shadow border-2" id="prompt">Prompt</button>
+        <div class="mouse-hover">
+          <button
+            id="mousehover"
+            class="mx-2 p-4 shadow border-2 bg-indigo-100"
+          >
+            Mouse Hover
+          </button>
+          <div class="mouse-hover-content">
+            <a href="#top">Top</a>
+            <a href="#">Reload</a>
+          </div>
+        </div>
+        <p class="m-4" id="demo"></p>
+      </section>
+      <section class="visibility" id="visibility">
+        <button
+          id="show"
+          class="mx-2 py-3 px-4 rounded shadow-md bg-blue-500 text-white"
+        >
+          Show
+        </button>
+        <button
+          id="hide"
+          class="mx-2 py-3 px-4 rounded shadow-md bg-blue-500 text-white"
+        >
+          Hide
+        </button>
+        <input
+          id="showHide"
+          placeholder="Visibility Check"
+          class="inline-block py-3 px-1 mt-2 text-gray-800 appearance-none border-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
+        />
+      </section>
+      <section class="links" id="frame">
+        <h1 class="text-4xl my-4">Frames & Links</h1>
+        <a
+          href="https://www.w3schools.com"
+          class="text-blue-500"
+          target="_blank"
+          >Visit W3Schools (target blank)</a
+        >
+        <div
+          class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        >
+          <iframe class="previewFrame border-2" id="previewFrame1"> </iframe>
+          <iframe class="previewFrame border-2" id="previewFrame2"> </iframe>
+          <iframe class="previewFrame border-2" id="previewFrame3"> </iframe>
+          <iframe class="border-2" src="https://github.com/nmanikiran"></iframe>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
