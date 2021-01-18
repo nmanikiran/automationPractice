@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const iframes = [
     {
-      url: 'http://www.htmlcodes.ws',
+      url: 'https://github.com/nmanikiran',
       target: '_top'
     },
     {
-      url: 'http://www.htmlcodes.ws',
+      url: 'https://nmanikiran.github.io/browser-apis/',
       target: '_self'
     },
     {
-      url: 'http://www.htmlcodes.ws',
+      url: 'https://nmanikiran.github.io/browser-apis/',
       target: '_parent'
     }
   ];

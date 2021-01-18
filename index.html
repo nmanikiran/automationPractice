@@ -14,54 +14,38 @@
   <body class="bg-gray-50 font-sans leading-normal tracking-normal">
     <!-- This example requires Tailwind CSS v2.0+ -->
     <nav class="fixed bg-gray-800 shadow-md z-50 w-full top-0 mt-0">
-      <div class="max-w-full mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="w-max mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
           <div
             class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
           >
-            <div class="sm:block sm:ml-6">
+            <div class="sm:block">
               <div class="flex space-x-4">
                 <a
                   href="#form"
                   class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Home</a
-                >
+                  >Home
+                </a>
                 <a
                   href="#popup"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Popup</a
-                >
+                  >Popup
+                </a>
                 <a
                   href="#frame"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Frames</a
-                >
+                  >Frames
+                </a>
                 <a
                   href="#media"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Media</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-          >
-            <!-- Profile dropdown -->
-            <div class="ml-3 relative">
-              <div>
-                <button
-                  class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  id="user-menu"
-                  aria-haspopup="true"
-                >
-                  <span class="sr-only">Open user menu</span>
-                  <img
-                    class="h-8 w-8 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
-                </button>
+                  >Media
+                </a>
+                <a
+                  href="#table"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Table
+                </a>
               </div>
             </div>
           </div>
@@ -304,7 +288,7 @@
           </div>
         </form>
       </section>
-      <section class="alerts" id="popup">
+      <section class="alerts-container" id="popup">
         <h1 class="mt-12 mb-4 text-4xl">Popup Boxes</h1>
         <hr class="py-2" />
         <button
@@ -348,9 +332,9 @@
           class="inline-block py-3 px-1 mt-2 text-gray-800 appearance-none border-2 border-gray-100 focus:text-gray-500 focus:outline-none focus:border-gray-200"
         />
       </section>
-      <section class="links" id="frame">
+      <section class="links-container" id="frame">
         <h1 class="text-4xl mt-12 mb-4">Frames & Links</h1>
-        <hr class="my-2" />
+        <hr class="my-4" />
         <a
           href="https://www.w3schools.com"
           class="text-blue-500"
@@ -366,7 +350,7 @@
           <iframe class="border-2" src="https://github.com/nmanikiran"></iframe>
         </div>
       </section>
-      <section class="media">
+      <section class="media-container">
         <h1 class="text-4xl mt-12 mb-4" id="media">Media</h1>
         <hr />
         <div class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-3 gap-4">
@@ -428,7 +412,13 @@
               />
             </picture>
           </div>
-          <div class="media-video">
+          <div class="media-audio-video">
+            <h1 class="text-2xl my-2">Audio Source</h1>
+            <audio controls class="my-4">
+              <source src="./media/horse.ogg" type="audio/ogg" />
+              <source src="./media/horse.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
             <h1 class="text-2xl my-2">Video Source</h1>
 
             <video width="100%" height="360" controls>
@@ -436,13 +426,6 @@
               <source src="./media/mov_bbb.ogv" type="video/ogg" />
               Your browser does not support the video tag.
             </video>
-          </div>
-          <div class="media-audio">
-            <audio controls>
-              <source src="./media/horse.ogg" type="audio/ogg" />
-              <source src="./media/horse.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
           </div>
         </div>
         <div>
@@ -456,6 +439,67 @@
             draggable="true"
           />
         </div>
+      </section>
+      <section class="table-container">
+        <h1 class="text-4xl mt-12 mb-4" id="table">Tables</h1>
+        <hr class="my-2" />
+        <table id="customers">
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+          <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+          </tr>
+        </table>
       </section>
     </div>
     <script src="./script.js"></script>
