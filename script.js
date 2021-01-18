@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  var $show = document.querySelector('#show');
-  var $hide = document.querySelector('#hide');
-  var $confirm = document.querySelector('#confirm');
-  var $prompt = document.querySelector('#prompt');
-  var $showhide = document.querySelector('#showHide');
-  var $previewFrame = document.querySelectorAll('.previewFrame');
+  const $show = document.querySelector('#show');
+  const $hide = document.querySelector('#hide');
+  const $confirm = document.querySelector('#confirm');
+  const $prompt = document.querySelector('#prompt');
+  const $showhide = document.querySelector('#showHide');
+  const $previewFrame = document.querySelectorAll('.previewFrame');
+  const $drag1 = document.querySelector('#drag1');
+  const $dropArea = document.querySelector('#dropArea');
+
   const iframes = [
     {
       url: 'http://www.htmlcodes.ws',
@@ -52,5 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
     var frame = iframes[index];
     var html_string = `<html><body><a href="${frame.url}" target=${frame.target}">HTML Codes ${frame.target}</a></body></html>`;
     ele.srcdoc = html_string;
+  });
+
+  $dropArea.addEventListener(
+    'dragover',
+    (event) => {
+      event.preventDefault();
+    },
+    false
+  );
+
+  $dropArea.addEventListener('drop', (ev) => {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData('text');
+    ev.target.appendChild(document.getElementById(data));
+  });
+
+  $drag1.addEventListener('dragstart', (ev) => {
+    ev.dataTransfer.setData('text', ev.target.id);
   });
 });

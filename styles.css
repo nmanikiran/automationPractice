@@ -1,7 +1,15 @@
 body {
-  padding-top: 4rem;
   padding-bottom: 10rem;
   box-sizing: border-box;
+}
+.container {
+  padding-top: 4rem;
+}
+#dropArea {
+  width: 350px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
 }
 .mouse-hover {
   display: inline-block;

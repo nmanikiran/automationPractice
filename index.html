@@ -36,6 +36,11 @@
                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >Frames</a
                 >
+                <a
+                  href="#media"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Media</a
+                >
               </div>
             </div>
           </div>
@@ -289,13 +294,7 @@
               id="reset"
               name="reset"
             />
-            <input
-              class="mx-2 p-4 shadow border-2 border-gray-100"
-              type="button"
-              id="button"
-              name="button"
-              value="Button"
-            />
+
             <input
               class="mx-2 p-4 shadow border-2 border-gray-100"
               type="submit"
@@ -350,7 +349,8 @@
         />
       </section>
       <section class="links" id="frame">
-        <h1 class="text-4xl my-4">Frames & Links</h1>
+        <h1 class="text-4xl mt-12 mb-4">Frames & Links</h1>
+        <hr class="my-2" />
         <a
           href="https://www.w3schools.com"
           class="text-blue-500"
@@ -364,6 +364,97 @@
           <iframe class="previewFrame border-2" id="previewFrame2"> </iframe>
           <iframe class="previewFrame border-2" id="previewFrame3"> </iframe>
           <iframe class="border-2" src="https://github.com/nmanikiran"></iframe>
+        </div>
+      </section>
+      <section class="media">
+        <h1 class="text-4xl mt-12 mb-4" id="media">Media</h1>
+        <hr />
+        <div class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-3 gap-4">
+          <div class="media-map">
+            <h1 class="text-2xl my-2">The area media attribute</h1>
+
+            <p>
+              Click on the computer, the phone, or the cup of coffee to go to a
+              new page and read more about the topic:
+            </p>
+
+            <img
+              src="./media/workplace.jpg"
+              alt="Workplace"
+              usemap="#workmap"
+              width="400"
+              height="379"
+            />
+
+            <map name="workmap">
+              <area
+                shape="rect"
+                coords="34,44,270,350"
+                alt="Computer"
+                href="https://www.w3schools.com/tags/computer.htm"
+              />
+              <area
+                shape="rect"
+                coords="290,172,333,250"
+                alt="Phone"
+                href="https://www.w3schools.com/tags/phone.htm"
+              />
+              <area
+                shape="circle"
+                coords="337,300,44"
+                alt="Cup of coffee"
+                href="https://www.w3schools.com/tags/coffee.htm"
+              />
+            </map>
+          </div>
+          <div class="media-picture">
+            <h1 class="text-2xl my-2">The picture element</h1>
+
+            <p>Resize the browser window to load different images.</p>
+
+            <picture>
+              <source
+                media="(min-width:650px)"
+                srcset="./media/img_pink_flowers.jpg"
+              />
+              <source
+                media="(min-width:465px)"
+                srcset="./media/img_white_flower.jpg"
+              />
+              <img
+                src="./media/img_orange_flowers.jpg"
+                alt="Flowers"
+                style="width: auto"
+              />
+            </picture>
+          </div>
+          <div class="media-video">
+            <h1 class="text-2xl my-2">Video Source</h1>
+
+            <video width="100%" height="360" controls>
+              <source src="./media/mov_bbb.mp4" type="video/mp4" />
+              <source src="./media/mov_bbb.ogv" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="media-audio">
+            <audio controls>
+              <source src="./media/horse.ogg" type="audio/ogg" />
+              <source src="./media/horse.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+        <div>
+          <h1 class="text-2xl my-2">Drag the image into the rectangle:</h1>
+          <hr class="my-2" />
+          <div id="dropArea"></div>
+          <br />
+          <img
+            id="drag1"
+            src="./media/img_orange_flowers.jpg"
+            draggable="true"
+          />
         </div>
       </section>
     </div>
