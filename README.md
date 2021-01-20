@@ -1,9 +1,9 @@
-# automationPractice
+# AutomationPractice
 
-This is demo site for automation / e2e testing
+This is demo site for automation / e2e testing.
 
-## demo
+## Demo
 
-https://nmanikiran.github.io/automationPractice/
+<https://nmanikiran.github.io/automationPractice/>
 
 ![demo](./media/demo.png)
